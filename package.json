@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "poiesis-email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "nodemailer": "^6.6.0"
+  }
+}

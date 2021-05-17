@@ -14,5 +14,5 @@ let texto = "Nombre del alumno: Tomás Fernández\n"
          + "Género de escritura predilecto: Ficción\n"
          + "Celular: 11-1111-1111\n"
 
-const enviador = crearEnviadorEmails()
-enviador.enviar(service, user, pass, texto)
+const enviador = crearEnviadorEmails(service, user, pass)
+enviador.enviar(texto)

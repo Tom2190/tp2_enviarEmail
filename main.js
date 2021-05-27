@@ -6,6 +6,8 @@ dotenv.config()
 let service = process.env.SERVICE
 let user = process.env.USER
 let pass = process.env.PASS
+let to = 'escritura.poiesis@gmail.com'
+let subject = '¡Enhorabuena! Nuevx alumnx'
 
 let texto = "Nombre del alumno: Tomás Fernández\n"
          + "Email del alumno: fernandez.abrevaya@gmail.com\n"
@@ -14,5 +16,5 @@ let texto = "Nombre del alumno: Tomás Fernández\n"
          + "Género de escritura predilecto: Ficción\n"
          + "Celular: 11-1111-1111\n"
 
-const enviador = crearEnviadorEmails(service, user, pass)
+const enviador = crearEnviadorEmails(service, user, pass, to, subject)
 enviador.enviar(texto)

@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-function crearEnviadorEmails(service, user, pass) {
+function crearEnviadorEmails(service, user, pass, to, subject) {
 
     return {
         enviar: async (texto) => {
@@ -13,9 +13,8 @@ function crearEnviadorEmails(service, user, pass) {
             })
             await transporter.sendMail({
                 from: 'escritura.poiesis@gmail.com',
-                to: 'escritura.poiesis@gmail.com',
-                subject: '¡Enhorabuena! Nuevx alumnx',
-                // 'Contenido del formulario enviado por el/la nuevx alumnx:'
+                to: to,
+                subject: subject,
                 text: texto
             })
             console.log("Email enviado")
